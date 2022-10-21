@@ -35,6 +35,8 @@
                         <label class="btn btn-outline-primary" for="two">2</label>
                         <input type="radio" class="btn-check" name="pick" id="three" autocomplete="off">
                         <label class="btn btn-outline-primary" for="three">3</label>
+                        <input type="radio" class="btn-check" name="pick" id="four" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="four">4</label>
                     </div>
 
                     <div class="form-group mt-3">
@@ -59,7 +61,7 @@
 
         var pick = 0;
 
-        var cardStack = [1, 2, 3];
+        var cardStack = [1, 2, 3, 4];
 
         var spinBtn = document.querySelector('#spin');
         var cardDisplay = document.querySelector("#card-display");
@@ -106,6 +108,7 @@
             document.querySelector('#one').checked = false;
             document.querySelector('#two').checked = false;
             document.querySelector('#three').checked = false;
+            document.querySelector('#four').checked = false;
         }
 
         function reset() {
@@ -135,6 +138,7 @@
             $('#one').click(() => pickCard(1));
             $('#two').click(() => pickCard(2));
             $('#three').click(() => pickCard(3));
+            $('#four').click(() => pickCard(4));
         });
 
 
