@@ -20,6 +20,7 @@ main {
   margin: auto;
   transition: all;
   transition-duration: 10ms;
+  padding-top: 130px;
 }
 
 #card-display:hover {
@@ -29,9 +30,11 @@ main {
 
 .win {
   box-shadow: inset 0 0 0 50vw rgba(16, 255, 8, 0.397);
+  color: rgb(8, 62, 8);
 }
 .lose {
   box-shadow: inset 0 0 0 50vw rgba(255, 0, 0, 0.397);
+  color: rgb(60, 0, 0);
 }
 
 .app-section {

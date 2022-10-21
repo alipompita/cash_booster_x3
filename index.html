@@ -22,9 +22,11 @@
             <div class="app-section app-header">
                 <img src="assets/img/logo_wide.png" alt="logo" width="200">
             </div>
-            <div class="app-section card  mt-3" id="card-display"></div>
+            <div class="app-section card  mt-3" id="card-display">
+                <h4 id="headline"></h4>
+                <small id="comment"></small>
+            </div>
             <div class="app-section app-footer">
-                <form></form>
                 <div class="form-group pt-2">
                     <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 
@@ -69,6 +71,8 @@
         function pickCard(card) {
             cardDisplay.classList.remove('win');
             cardDisplay.classList.remove('lose');
+            $('#headline').html('');
+            $('#comment').html('');
             pick = card;
             // console.log("picked: " + card);
             spinBtn.removeAttribute('disabled');
@@ -86,8 +90,13 @@
                     $('#card-display').css('background', 'url(assets/img/card_' + card + '.jpg)');
                     if (pick != card) {
                         cardDisplay.classList.add('lose');
+                        $('#headline').html("You Lost!");
+                        $('#comment').html("Better luck next time");
+
                     } else {
                         cardDisplay.classList.add('win');
+                        $('#headline').html("You Won");
+                        $('#comment').html("Congratulations!!!!");
                     }
                 }
                 if (i > 3) i = 1;
@@ -116,6 +125,8 @@
             spinBtn.setAttribute('disabled', 'disabled');
             cardDisplay.classList.remove('win');
             cardDisplay.classList.remove('lose');
+            $('#headline').html('');
+            $('#comment').html('');
             $('#card-display').css('background', 'url(assets/img/card_back.jpg)');
             console.log('reset');
         }
