@@ -82,12 +82,12 @@
             var i = 1;
             var count = 100;
             var tid = setInterval(() => {
-                $('#card-display').css('background', 'url(assets/img/card_' + i + '.jpg)');
+                $('#card-display').css('background-image', 'url(assets/img/card_' + i + '.jpg)');
                 count--;
                 i++;
                 if (count <= 0) {
                     clearInterval(tid);
-                    $('#card-display').css('background', 'url(assets/img/card_' + card + '.jpg)');
+                    $('#card-display').css('background-image', 'url(assets/img/card_' + card + '.jpg)');
                     if (pick != card) {
                         cardDisplay.classList.add('lose');
                         $('#headline').html("You Lost!");
@@ -127,7 +127,7 @@
             cardDisplay.classList.remove('lose');
             $('#headline').html('');
             $('#comment').html('');
-            $('#card-display').css('background', 'url(assets/img/card_back.jpg)');
+            $('#card-display').css('background-image', 'url(assets/img/card_back.jpg)');
             console.log('reset');
         }
 

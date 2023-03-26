@@ -14,6 +14,7 @@ main {
 
 #card-display {
   background: url("img/card_back.jpg");
+  background-position: center;
   background-size: cover;
   width: 270px;
   height: 400px;
